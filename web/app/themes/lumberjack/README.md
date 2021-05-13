@@ -11,6 +11,7 @@ For the first time :
 
 Normally: `docker-compose up -d`
 
+
 3. Export the latest copy of the database from phpmyadmin
 
 4. ### Update your hosts file
