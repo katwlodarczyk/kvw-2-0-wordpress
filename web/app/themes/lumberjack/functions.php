@@ -24,3 +24,8 @@ if (function_exists('acf_add_options_page')) {
         'redirect'      => false
     ));
 }
+function add_to_context($context)
+{
+    $context['options'] = get_fields('option');
+    return $context;
+}
