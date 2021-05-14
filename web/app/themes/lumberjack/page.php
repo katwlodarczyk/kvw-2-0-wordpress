@@ -26,6 +26,7 @@ class PageController extends Controller
         $context['post'] = $page;
         $context['title'] = $page->title;
         $context['content'] = $page->content;
+        // dd($context);
 
         return new TimberResponse('templates/generic-page.twig', $context);
     }
