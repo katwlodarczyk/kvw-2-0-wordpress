@@ -32527,6 +32527,16 @@ video {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+.overlay-active {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  position: fixed;
+  z-index: 40;
+  background-color: #DDC6C6;
+  opacity: 0.9;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
