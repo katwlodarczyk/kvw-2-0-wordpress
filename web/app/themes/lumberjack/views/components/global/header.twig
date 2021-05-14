@@ -12,12 +12,12 @@
             </defs>
         </svg>
     </div>
-    <div class="main-nav text-gray-700 font-inter text-lg tracking-wider bg-brand-powder-pink h-1/2 flex items-center">
+    <div class="main-nav text-gray-600 font-inter text-md tracking-wider bg-brand-powder-pink h-1/2 flex items-center justify-center ">
 
             <div class="responsive-button  z-50 xl:hidden select-none flex space-x-4 text-lg leading-5 items-center cursor-pointer">
                 <div class="menu-icon menu-menu-icon relative flex flex-row items-center space-x-3 py-2.5">
                     <span>MENU</span>
-                    <svg class="menu-menu-icon text-gray-900 fill-current" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="menu-menu-icon text-gray-600 fill-current" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 9.00195H17M1 1.00195H17H1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
@@ -26,10 +26,10 @@
                 </svg>
             </div>
 
-            <ul class="navigation desktop-navigation hidden xl:flex flex-row h-full relative">
+            <ul class="navigation desktop-navigation hidden xl:flex flex-row h-full relative px-20 space-x-4">
                 {% for item in menu.items %}
                     <li class="group nav-main-item">
-                        <a class="flex flex-row items-center justify-center text-gray-700 group-hover:bg-brand-dark-pink w-full h-full p-5 inline-block" href="{{ item.link }}">
+                        <a class="flex flex-row items-center justify-center font-light text-gray-600 group-hover:bg-brand-dark-pink group-hover:text-white w-full h-full px-5 py-2 inline-block" href="{{ item.link }}">
                             <span>{{ item.title }}</span>
                         </a>
                     </li>
@@ -40,7 +40,7 @@
                 {% for item in main_nav.items %}
                     <li class="text-lg leading-7.5 mb-5 nav-item {{ item.children ? '--has-children' : '' }} {{ item.classes|join(' ') }}">
                         <a class="w-max mx-auto h-full flex justify-center inline-block pb-3" href="{{ item.link }}">
-                            <div class="cursor-pointer menu-link flex flex-row items-center justify-center space-x-2 text-gray-700 font-inter font-normal">
+                            <div class="cursor-pointer menu-link flex flex-row items-center justify-center space-x-2 text-gray-600 font-inter font-normal">
                                 <span>{{ item.title }}</span>
                                 <span class="nav-item-arrow  {{ item.children ? 'inline' : 'hidden' }}">
                                         <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
