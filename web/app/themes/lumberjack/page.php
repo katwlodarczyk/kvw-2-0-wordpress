@@ -25,6 +25,11 @@ class PageController extends Controller
         $context['post'] = $page;
         $context['title'] = $page->title;
         $context['content'] = $page->content;
+        $context['footer_col_1'] = new \Timber\Menu( 'footer_col_1' );
+        $context['footer_col_2'] = new \Timber\Menu( 'footer_col_2' );
+        $context['footer_col_3'] = new \Timber\Menu( 'footer_col_3' );
+        $context['footer_col_4'] = new \Timber\Menu( 'footer_col_4' );
+
         // $context['page_blocks'] = $this->pageBlocks($page->id);
         // dd($context);
 
