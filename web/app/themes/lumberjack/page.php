@@ -22,13 +22,11 @@ class PageController extends Controller
     {
         $context = Timber::get_context();
         $page = new Page();
-
         $context['post'] = $page;
         $context['title'] = $page->title;
         $context['content'] = $page->content;
         // $context['page_blocks'] = $this->pageBlocks($page->id);
-        dd($context);
-
+        // dd($context);
 
         return new TimberResponse('templates/generic-page.twig', $context);
     }
