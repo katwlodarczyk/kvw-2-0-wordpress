@@ -20,7 +20,7 @@ $(document).ready(function () {
   $window.resize(function () {
     var windowWidth = $window.width();
 
-    if (windowWidth > 768) {
+    if (windowWidth > 1024) {
       $('#overlay').removeClass("overlay-active");
       $(".responsive-navigation").css("display", "none");
       $(".menu-close").css("display", "none");
