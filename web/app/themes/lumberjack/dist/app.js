@@ -28,7 +28,12 @@ $(document).ready(function () {
       $(".menu-close-icon").css("display", "none");
     }
   });
-});
+}); // AUTOMATIC DATE UPDATE FOR FOOTER
+
+var footerYear = document.getElementById("year");
+var date = new Date();
+var year = date.getFullYear();
+footerYear.innerText = year;
 
 /***/ }),
 
