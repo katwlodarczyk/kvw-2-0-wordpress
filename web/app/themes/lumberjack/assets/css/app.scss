@@ -3,6 +3,7 @@
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
 
+@import "forms/contact-form-7.scss";
 
 .overlay-active {
     width: 100%;
@@ -13,3 +14,4 @@
     background-color: #DDC6C6;
     opacity: 0.95;
 }
+

@@ -54,7 +54,9 @@
     "rareloop/lumberjack-core": "^5.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/wp-migrate-db":"1.0.16",
-    "yoast/wordpress-seo": "^15.1"
+    "yoast/wordpress-seo": "^15.1",
+    "wpackagist-plugin/contact-form-7": "~5.1",
+    "wpackagist-plugin/acf-field-for-contact-form-7":"1.6"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",
