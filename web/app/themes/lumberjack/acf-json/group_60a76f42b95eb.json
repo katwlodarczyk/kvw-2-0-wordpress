@@ -35,7 +35,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Got an idea for a photoshoot?",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -54,7 +54,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Let's talk.",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -100,26 +100,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Contact me",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
-                        {
-                            "key": "field_60a77065330e9",
-                            "label": "Button Color",
-                            "name": "button_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "#F1E6E6"
                         },
                         {
                             "key": "field_60a7708b330ea",
@@ -351,6 +336,54 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60a7caa553610": {
+                    "key": "layout_60a7caa553610",
+                    "name": "contact_form",
+                    "label": "Contact Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60a7caac53611",
+                            "label": "Header",
+                            "name": "header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Get in touch",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60a7cac753612",
+                            "label": "Subheader",
+                            "name": "subheader",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -375,5 +408,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621598783
+    "modified": 1621609257
 }

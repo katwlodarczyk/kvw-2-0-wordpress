@@ -18,7 +18,21 @@ module.exports = {
             'brand-dark-pink' : '#DDC6C6',
             'brand-matt-pink' : '#E2D8D8',
             'brand-gray' : '#7C808D'
-        }
+        },
+        typography: {
+            DEFAULT: {
+              css: {
+                a: {
+                  fontWeight: '600',
+                  color: '#1F2937',
+                  textDecoration: 'unset',
+                  '&:hover': {
+                    textDecoration: 'underline',
+                  },
+                },
+              },
+            },
+          }
     },
   },
   variants: {

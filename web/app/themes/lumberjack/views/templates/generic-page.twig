@@ -25,5 +25,11 @@
 
         {% endif %}
 
+        {% if AcfLayout == 'contact_form' %}
+
+            {% include "components/contentBlocks/contact_form.twig" %}
+
+        {% endif %}
+
     {% endfor %}
 {% endblock %}
