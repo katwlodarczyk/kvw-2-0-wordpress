@@ -11,6 +11,6 @@ web/app/uploads/*
 web/wp
 web/.htaccess
 # Theme
-node_modules
+node_modules/
 mix-manifest.json
 /web/app/themes/lumberjack/dist
