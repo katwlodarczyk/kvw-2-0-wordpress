@@ -142,8 +142,8 @@
                 },
                 "layout_60a778f692413": {
                     "key": "layout_60a778f692413",
-                    "name": "author-short",
-                    "label": "Author-short",
+                    "name": "text_image_short",
+                    "label": "Text Image Short",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -258,5 +258,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621592184
+    "modified": 1621593513
 }

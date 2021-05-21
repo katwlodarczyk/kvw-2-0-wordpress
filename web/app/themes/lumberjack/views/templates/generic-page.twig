@@ -2,7 +2,7 @@
 
 {# PAGE BLOCKS #}
 {% block content_region %}
-{{dump(page_blocks)}}
+{# {{dump(page_blocks)}} #}
     {% for page_block in page_blocks %}
         {%  set AcfLayout = page_block.acf_fc_layout %}
         {%  set IsFirst = loop.index == 1 %}
@@ -13,9 +13,9 @@
 
         {% endif %}
 
-        {% if AcfLayout == 'author-short' %}
+        {% if AcfLayout == 'text_image_short' %}
 
-            {% include "components/contentBlocks/author-short.twig" %}
+            {% include "components/contentBlocks/text_image_short.twig" %}
 
         {% endif %}
 
