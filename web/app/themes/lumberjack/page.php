@@ -30,40 +30,21 @@ class PageController extends Controller
         $context['footer_col_3'] = new \Timber\Menu( 'footer_col_3' );
         $context['footer_col_4'] = new \Timber\Menu( 'footer_col_4' );
 
-        // $context['page_blocks'] = $this->pageBlocks($page->id);
+        $context['page_blocks'] = $this->pageBlocks($page->id);
+
         // dd($context);
 
         return new TimberResponse('templates/generic-page.twig', $context);
     }
 
-    /**
+
+
+   /**
      * @param $id
      * @return mixed
      */
-    // public function pageBlocks($id)
-    // {
-    //     $layouts = collect(get_field('layouts', $id));
-
-    //     foreach ($layouts as $key => $layout) {
-    //         if ($layout) {
-    //             if ($layout['acf_fc_layout'] === 'call_to_action') {
-    //                 $layouts[$key] = $this->getCallToActionsWithLinkedPages($layout);
-    //             }
-
-    //             if ($layout['acf_fc_layout'] === 'latest_articles') {
-    //                 $layouts[$key] = $this->getLatestNewsWithNews($layout, $id);
-    //             }
-
-    //             if ($layout['acf_fc_layout'] === 'faqs') {
-    //                 $layouts[$key] = $this->getFaqData($layout);
-    //             }
-
-    //             if ($layout['acf_fc_layout'] === 'meet_the_team') {
-    //                 $layouts[$key] = $this->getAdditionalProfileData($layout);
-    //             }
-    //         }
-    //     }
-
-    //     return $layouts;
-    // }
+    public static function pageBlocks($id)
+    {
+        return get_field('content_blocks', $id);
+    }
 }

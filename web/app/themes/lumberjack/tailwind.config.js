@@ -16,7 +16,7 @@ module.exports = {
         colors: {
             'brand-powder-pink' : '#F1E6E6',
             'brand-dark-pink' : '#DDC6C6',
-            'brand-matt-pink' : '#CAC1C1',
+            'brand-matt-pink' : '#E2D8D8',
             'brand-gray' : '#7C808D'
         }
     },

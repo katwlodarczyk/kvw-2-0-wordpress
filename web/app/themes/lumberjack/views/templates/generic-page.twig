@@ -1,8 +1,23 @@
 {% extends "base.twig" %}
 
-{% block content %}
-    <main>
-        <h1>{{ title }}</h1>
-        {{ content|raw }}
-    </main>
+{# PAGE BLOCKS #}
+{% block content_region %}
+{{dump(page_blocks)}}
+    {% for page_block in page_blocks %}
+        {%  set AcfLayout = page_block.acf_fc_layout %}
+        {%  set IsFirst = loop.index == 1 %}
+
+        {% if AcfLayout == 'cta' %}
+
+            {% include "components/contentBlocks/CTA.twig" %}
+
+        {% endif %}
+
+        {% if AcfLayout == 'author-short' %}
+
+            {# {% include "components/contentBlocks/author-short.twig" %} #}
+
+        {% endif %}
+
+    {% endfor %}
 {% endblock %}
