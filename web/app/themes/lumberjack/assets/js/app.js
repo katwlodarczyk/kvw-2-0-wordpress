@@ -29,7 +29,7 @@ $(document).ready(function () {
         dots: true,
         arrows: false,
         infinite: true,
-        speed: 500,
+        speed: 650,
         fade: true,
         cssEase: 'linear',
         adaptiveHeight: true,
