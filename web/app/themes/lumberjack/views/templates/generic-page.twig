@@ -31,5 +31,11 @@
 
         {% endif %}
 
+        {% if AcfLayout == 'carousel' %}
+
+            {% include "components/contentBlocks/carousel.twig" %}
+
+        {% endif %}
+
     {% endfor %}
 {% endblock %}

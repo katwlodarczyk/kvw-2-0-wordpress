@@ -124,6 +124,18 @@ $(document).ready(function () {
       $(".menu-menu-icon").css("display", "flex");
       $(".menu-close-icon").css("display", "none");
     }
+  }); // SLICK.JS SLIDER
+  // banner slider
+
+  $('.carousel').slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    adaptiveHeight: true,
+    autoplay: true
   });
 }); // AUTOMATIC DATE UPDATE FOR FOOTER
 

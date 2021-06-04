@@ -22,6 +22,20 @@ $(document).ready(function () {
             $(".menu-close-icon").css("display", "none");
         }
     })
+
+    // SLICK.JS SLIDER
+    // banner slider
+    $('.carousel').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        adaptiveHeight: true,
+        autoplay: true
+    });
+
 })
 
 
@@ -32,3 +46,4 @@ const date = new Date();
 const year = date.getFullYear();
 
 footerYear.innerText = year;
+
