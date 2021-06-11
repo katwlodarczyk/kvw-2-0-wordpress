@@ -24,7 +24,7 @@ $(document).ready(function () {
     })
 
     // SLICK.JS SLIDER
-    // banner slider
+    // carousel
     $('.carousel').slick({
         dots: true,
         arrows: false,
@@ -34,6 +34,52 @@ $(document).ready(function () {
         cssEase: 'linear',
         adaptiveHeight: true,
         autoplay: true
+    });
+
+    //carouselWithPreview
+    $('.carousel-with-preview').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        asNavFor: '.carousel-with-preview-nav',
+        initialSlide: 0,
+        swipe: true,
+        infinite: true,
+        speed: 650,
+        fade: true,
+        cssEase: 'linear',
+        adaptiveHeight: true,
+        autoplay: true
+    });
+    $('.carousel-with-preview-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.carousel-with-preview',
+        dots: false,
+        arrows: true,
+        focusOnSelect: false,
+        infinite: true,
+        initialSlide: 0,
+        focusOnSelect: true,
+        centerMode: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    adaptiveHeight: true,
+                }
+        },
+            {   breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    adaptiveHeight: true,
+                }
+        }
+        ]
     });
 
 })

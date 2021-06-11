@@ -104,8 +104,12 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 // MENU
 $(document).ready(function () {
+  var _$$slick;
+
   $(".responsive-button").click(function () {
     $(".menu-icon").toggle();
     $(".menu").toggle();
@@ -125,7 +129,7 @@ $(document).ready(function () {
       $(".menu-close-icon").css("display", "none");
     }
   }); // SLICK.JS SLIDER
-  // banner slider
+  // carousel
 
   $('.carousel').slick({
     dots: true,
@@ -136,7 +140,47 @@ $(document).ready(function () {
     cssEase: 'linear',
     adaptiveHeight: true,
     autoplay: true
+  }); //carouselWithPreview
+
+  $('.carousel-with-preview').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    asNavFor: '.carousel-with-preview-nav',
+    initialSlide: 0,
+    swipe: true,
+    infinite: true,
+    speed: 650,
+    fade: true,
+    cssEase: 'linear',
+    adaptiveHeight: true,
+    autoplay: true
   });
+  $('.carousel-with-preview-nav').slick((_$$slick = {
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.carousel-with-preview',
+    dots: false,
+    arrows: true,
+    focusOnSelect: false,
+    infinite: true,
+    initialSlide: 0
+  }, _defineProperty(_$$slick, "focusOnSelect", true), _defineProperty(_$$slick, "centerMode", true), _defineProperty(_$$slick, "responsive", [{
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      adaptiveHeight: true
+    }
+  }, {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true
+    }
+  }]), _$$slick));
 }); // AUTOMATIC DATE UPDATE FOR FOOTER
 
 var footerYear = document.getElementById("year");
