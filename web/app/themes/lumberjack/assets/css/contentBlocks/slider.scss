@@ -1,0 +1,14 @@
+.carousel .carousel-with-preview {
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-slide {
+        // height: inherit !important;
+    }
+
+    .slick-initialized .slick-slide {
+        display: flex !important;
+    }
+
+}

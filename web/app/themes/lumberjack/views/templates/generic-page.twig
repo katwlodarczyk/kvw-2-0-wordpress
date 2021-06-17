@@ -1,8 +1,47 @@
 {% extends "base.twig" %}
 
-{% block content %}
-    <main>
-        <h1>{{ title }}</h1>
-        {{ content|raw }}
-    </main>
+{# PAGE BLOCKS #}
+{% block content_region %}
+{# {{dump(page_blocks)}} #}
+    {% for page_block in page_blocks %}
+        {%  set AcfLayout = page_block.acf_fc_layout %}
+        {%  set IsFirst = loop.index == 1 %}
+
+        {% if AcfLayout == 'cta' %}
+
+            {% include "components/contentBlocks/CTA.twig" %}
+
+        {% endif %}
+
+        {% if AcfLayout == 'text_image_short' %}
+
+            {% include "components/contentBlocks/text_image_short.twig" %}
+
+        {% endif %}
+
+        {% if AcfLayout == 'text_image_large' %}
+
+            {% include "components/contentBlocks/text_image_large.twig" %}
+
+        {% endif %}
+
+        {% if AcfLayout == 'contact_form' %}
+
+            {% include "components/contentBlocks/contact_form.twig" %}
+
+        {% endif %}
+
+        {% if AcfLayout == 'carousel' %}
+
+            {% include "components/contentBlocks/carousel.twig" %}
+
+        {% endif %}
+
+         {% if AcfLayout == 'carousel_with_preview' %}
+
+            {% include "components/contentBlocks/carousel_with_preview.twig" %}
+
+        {% endif %}
+
+    {% endfor %}
 {% endblock %}

@@ -1,0 +1,18 @@
+// TailwindCSS
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+@import "forms/contact-form-7.scss";
+@import "contentBlocks/slider.scss";
+
+.overlay-active {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: fixed;
+    z-index: 40;
+    background-color: #DDC6C6;
+    opacity: 0.95;
+}
+

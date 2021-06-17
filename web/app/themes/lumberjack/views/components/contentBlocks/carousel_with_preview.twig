@@ -1,0 +1,18 @@
+<div class="mx-auto">
+    <div class="container mx-auto carousel-with-preview outline-none" style="">
+        {% for content in page_block.content %}
+            <div class="slide w-full font-primary relative overflow-hidden">
+                <div class="one-slide flex justify-center relative wrapper w-full h-full z-10 outline-none">
+                       <img class="cover object-cover" src="{{ content.image.link }}"/>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="carousel-with-preview-nav pt-6 flex flex-row align-center justify-center">
+        {% for content in page_block.content %}
+            <div class="outline-none cursor-pointer mx-3 flex justify-center">
+                <img class="justify-center self-center" src="{{ content.image.link }}" alt="">
+            </div>
+        {% endfor %}
+    </div>
+</div>

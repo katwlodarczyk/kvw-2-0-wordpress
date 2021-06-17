@@ -1,0 +1,59 @@
+version: '3'
+services:
+
+  #NGINX
+  webserver:
+    image: nginx:stable-alpine
+    container_name: kvw-2-0-webserver
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+      - mysql
+    volumes:
+      - ./:/var/www/html:delegated
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - app
+
+  #MYSQL
+  mysql:
+    image: mysql:5.7
+    container_name: kvw-2-0-mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql:delegated
+    environment:
+      MYSQL_DATABASE: kvw-2-0
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - app
+
+  #PHP
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kvw-2-0-app
+    volumes:
+      - ./:/var/www/html:delegated
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    ports:
+      - "9000:9000"
+    networks:
+      - app
+
+#Docker Networks
+networks:
+  app:
+
+#Docker Volumes
+volumes:
+  mysql:

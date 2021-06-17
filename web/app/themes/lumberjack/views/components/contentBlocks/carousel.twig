@@ -1,0 +1,11 @@
+<div class="container mx-auto">
+    <div class="carousel outline-none" style="">
+        {% for content in page_block.content %}
+            <div class="slide w-full font-primary relative overflow-hidden">
+                <div class="one-slide flex justify-center relative wrapper w-full h-full z-10 outline-none">
+                       <img class="cover object-cover" src="{{ content.image.link }}"/>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
