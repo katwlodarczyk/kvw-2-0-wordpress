@@ -50,7 +50,14 @@ $(document).ready(function () {
         fade: true,
         cssEase: 'linear',
         adaptiveHeight: true,
-        autoplay: true
+        autoplay: true,
+        responsive: [
+            {   breakpoint: 480,
+                settings: {
+                    dots: false,
+                }
+        }
+        ]
     });
     $('.carousel-with-preview-nav').slick({
         slidesToShow: 4,
