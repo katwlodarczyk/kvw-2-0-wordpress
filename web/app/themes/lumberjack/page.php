@@ -25,6 +25,7 @@ class PageController extends Controller
         $context['post'] = $page;
         $context['title'] = $page->title;
         $context['content'] = $page->content;
+        $context['main_navigation'] = new \Timber\Menu( 'main_navigation' );
         $context['footer_col_1'] = new \Timber\Menu( 'footer_col_1' );
         $context['footer_col_2'] = new \Timber\Menu( 'footer_col_2' );
         $context['footer_col_3'] = new \Timber\Menu( 'footer_col_3' );
