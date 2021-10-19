@@ -1,10 +1,10 @@
 # KATVONWIESENDORF.COM 2.0 wordpress
 
 ## Local Development
-1. ### Create .env
+1. Create .env
 `cp .env.example .env`
 
-2. ### Running Docker:
+2. Running Docker:
 
 For the first time :
 `docker-compose up -d --build`
@@ -14,7 +14,7 @@ Normally: `docker-compose up -d`
 
 3. Export the latest copy of the database from phpmyadmin
 
-4. ### Update your hosts file
+4. Update your hosts file
 
 `sudo vi /etc/hosts` and add the following:
 ```
